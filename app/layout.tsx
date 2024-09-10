@@ -6,7 +6,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  // è solo un commento
+  // è solo un commento - modifica
   return (
     <html lang="en">
       <body className={`${inter.className} antialiased`}>{children}</body>
