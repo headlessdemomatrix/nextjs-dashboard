@@ -216,3 +216,14 @@ export function InvoicesTableSkeleton() {
     </div>
   );
 }
+
+
+export function VideoSkeleton() {
+  return (
+    <div className={`relative w-full overflow-hidden md:col-span-4`}>
+      <div className="rounded-xl bg-gray-100 p-4">
+        <div className="mt-0 items-end gap-2 rounded-md bg-white p-4" />
+      </div>
+    </div>
+  );
+}
