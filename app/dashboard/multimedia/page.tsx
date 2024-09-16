@@ -36,7 +36,7 @@ async function VideoComponent({ fileName } : {fileName :string}) {
   const { url } = blobs[0]
  
   return (
-    <video autoPlay muted controls preload="none" aria-label="Video player">
+    <video autoPlay muted controls preload="none" aria-label="Video player" poster='/img/test_video_poster.png'>
       <source src={url} type="video/mp4" />
       Your browser does not support the video tag.
     </video>
