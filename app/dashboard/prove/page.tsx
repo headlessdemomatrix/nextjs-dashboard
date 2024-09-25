@@ -9,12 +9,44 @@ export default function Page(){
     return (
       <main>
         <h1 className={`${lusitana.className} text-2xl`}>Test Page</h1>
+        <div className="relative rounded-xl h-auto pt-4"> 
+          <h2 className={`${lusitana.className} text-2xl mt-8 font-bold text-center`}>--- PLAY WITH PADDING / MARGIN ---</h2>
+          <div className="flex flex-row h-auto rounded-lg items-center bg-sky-600 mt-4 p-4 text-sm font-bold text-white transition-colors">
+            <div className="flex flex-row justify-center items-center space-x-64 rounded-lg bg-sky-500 w-72 h-72 mr-4 font-mono text-white text-sm font-bold leading-6">
+              <div className="flex justify-center items-center w-48 h-48 self-left rounded-lg bg-sky-400">
+                <div className='w-16 h-16 rounded-lg bg-sky-300'></div>
+              </div>
+            </div>
+            <div className="flex flex-row justify-center items-center space-x-64 rounded-lg bg-sky-500 w-72 h-72 mr-4 font-mono text-white text-sm font-bold leading-6">
+              <div className="w-48 h-48 self-center rounded-lg bg-sky-400">
+                <div className='pl-16 w-16 h-16 rounded-lg bg-sky-300 m-10'></div>
+              </div>
+            </div>
+            <div className="flex flex-row justify-center items-center space-x-64 rounded-lg bg-sky-500 w-72 h-72 mr-4 font-mono text-white text-sm font-bold leading-6">
+              <div className="w-48 h-48 self-right rounded-lg bg-sky-400">
+                <div className='pl-16 w-16 h-16 rounded-lg bg-sky-300 mt-20'></div>
+              </div>
+            </div>
+            <div className="flex flex-row justify-center items-center space-x-64 rounded-lg bg-sky-500 w-72 h-72 mr-4 font-mono text-white text-sm font-bold leading-6">
+              <div className="w-48 h-48 self-right rounded-lg bg-sky-400 pl-32">
+                <div className='pl-16 w-16 h-16 rounded-lg bg-sky-300 mt-20'></div>
+              </div>
+            </div>
+            <div className="flex flex-row justify-center items-center space-x-64 rounded-lg bg-sky-500 w-72 h-72 mr-4 font-mono text-white text-sm font-bold leading-6">
+              <div className="w-48 h-48 self-center rounded-lg bg-sky-400 pl-12">
+                <div className='pl-16 w-16 h-16 rounded-lg bg-sky-300 m-10'></div>
+              </div>
+            </div>
+          </div>        
+        </div>
+
+
         {/* ---------------------------Grid Example-----------------------------------------------*/}
         <div className="relative rounded-xl h-auto pt-4"> 
           <h2 className={`${lusitana.className} text-2xl mt-8 font-bold text-center`}>--- GRID EXAMPLE ---</h2>
           {/* Grid Cols*/}
           <div className="grid grid-cols-3 gap-3 h-auto space-x-4 rounded-lg justify-center text-center items-center bg-orange-400 mt-8 py-4 px-4 text-sm font-bold text-white transition-colors">
-            <p className='order-first w-auto p-4'>Grid</p>
+            <p className='order-first w-auto p-4'>Grid Coloumns</p>
             <div className="w-64 h-16 rounded-lg bg-orange-600">01</div>
             <div className="w-64 h-16 rounded-lg bg-orange-600">02</div>
             <div className="w-64 h-16 rounded-lg bg-orange-600">03</div>
@@ -44,6 +76,52 @@ export default function Page(){
             </div>
           </div>
 
+          {/* Col: Span / Start-End*/}
+          <div className="grid grid-cols-4 gap-4 h-auto space-x-4 rounded-lg justify-center text-center items-center bg-orange-400 mt-8 py-4 px-4 text-sm font-bold text-white transition-colors">
+            <p className='order-first w-auto p-4'>Coloumns: Span / Start-End</p>
+            <div className="col-span-2 w-auto h-16 rounded-lg bg-orange-600">01 - SPAN-2</div>
+            <div className="w-auto h-16 rounded-lg bg-orange-600">02</div>
+            <div className="col-span-3 w-auto h-16 rounded-lg bg-orange-600">03 - SPAN-3</div>  
+            <div className="col-start-2 w-auto h-16 rounded-lg bg-orange-600">04 - START-2</div>
+            <div className="col-start-4 w-auto h-16 rounded-lg bg-orange-600">05 - START-4</div>
+            <div className="w-auto h-16 rounded-lg bg-orange-600">06</div>
+            <div className="w-auto h-16 rounded-lg bg-orange-600">07</div>
+            <div className="col-span-2 hover:col-span-1 w-auto h-16 rounded-lg bg-orange-600">08 - MOUSE HOVER FOR SPAN-1</div>
+          </div>
+
+          {/* Grid Rows*/}
+          <div className="grid grid-rows-2 hover:grid-rows-4 grid-flow-col gap-4 space-x-4 rounded-lg text-center bg-orange-400 mt-8 py-4 px-4 text-sm font-bold text-white transition-colors">
+            <p className='order-first w-auto p-4 text-center'>Grid Rows</p>
+            <div className="w-auto h-16 rounded-lg bg-orange-600">01</div>
+            <div className="w-auto h-16 rounded-lg bg-orange-600">02</div>
+            <div className="w-auto h-16 rounded-lg bg-orange-600">03</div>
+            <div className="w-auto h-16 rounded-lg bg-orange-600">04</div>
+            <div className="w-auto h-16 rounded-lg bg-orange-600">05</div>
+            <div className="w-auto h-16 rounded-lg bg-orange-600">06</div>
+            <div className="w-auto h-16 rounded-lg bg-orange-600">07</div>
+            <div className="w-auto h-16 rounded-lg bg-orange-600">08</div>
+            <div className="w-auto h-16 rounded-lg bg-orange-600">09</div>
+            <div className="w-auto h-16 rounded-lg bg-orange-600">10</div>
+          </div>
+
+          {/* Grid Subrows*/}
+          <div className="relative grid grid-rows-5 grid-flow-col gap-3 space-x-4 rounded-lg text-center bg-orange-400 mt-8 py-4 px-4 text-sm font-bold text-white transition-colors">
+            <p className='order-first w-auto p-4 text-center'>Grid Subrows</p>
+            <div className="w-auto h-16 rounded-lg bg-orange-600">01</div>
+            <div className="w-auto h-16 rounded-lg bg-orange-600">02</div>
+            <div className="w-auto h-16 rounded-lg bg-orange-600">03</div>
+            <div className="w-auto h-16 rounded-lg bg-orange-600">04</div>
+            <div className='grid grid-rows-subgrid gap-2 row-span-3 rounded-lg bg-orange-900 justify-center'>
+              <div className="row-start-2 w-64 h-16 rounded-lg bg-orange-600">05 - SPAN-3 / START-2</div>
+            </div>
+            <div className="w-auto h-16 rounded-lg bg-orange-600">06</div>
+            <div className="w-auto h-16 rounded-lg bg-orange-600">07</div>
+            <div className="w-auto h-16 rounded-lg bg-orange-600">08</div>
+            <div className='grid grid-rows-subgrid gap-2 row-span-3 rounded-lg bg-orange-900 justify-center'>
+              <div className="row-start-2 w-64 h-16 rounded-lg bg-orange-600">09 - SPAN-3 / START-2</div>
+            </div>
+            <div className="w-auto h-16 rounded-lg bg-orange-600">10</div>
+          </div>
         </div>
 
 
