@@ -9,7 +9,45 @@ export default function Page(){
     return (
       <main>
         <h1 className={`${lusitana.className} text-2xl`}>Test Page</h1>
-        
+        {/* ---------------------------Grid Example-----------------------------------------------*/}
+        <div className="relative rounded-xl h-auto pt-4"> 
+          <h2 className={`${lusitana.className} text-2xl mt-8 font-bold text-center`}>--- GRID EXAMPLE ---</h2>
+          {/* Grid Cols*/}
+          <div className="grid grid-cols-3 gap-3 h-auto space-x-4 rounded-lg justify-center text-center items-center bg-orange-400 mt-8 py-4 px-4 text-sm font-bold text-white transition-colors">
+            <p className='order-first w-auto p-4'>Grid</p>
+            <div className="w-64 h-16 rounded-lg bg-orange-600">01</div>
+            <div className="w-64 h-16 rounded-lg bg-orange-600">02</div>
+            <div className="w-64 h-16 rounded-lg bg-orange-600">03</div>
+            <div className="w-64 h-16 rounded-lg bg-orange-600">04</div>
+            <div className="w-64 h-16 rounded-lg bg-orange-600">05</div>
+          </div>
+          {/* Grid Subgrid*/}
+          <div className="grid grid-cols-4 gap-4 h-auto space-x-4 rounded-lg justify-center text-center items-center bg-orange-400 mt-8 py-4 px-4 text-sm font-bold text-white transition-colors">
+            <p className='order-first w-auto p-4'>Grid Subgrid</p>
+            <div className="w-32 h-16 rounded-lg bg-orange-600">01</div>
+            <div className="w-32 h-16 rounded-lg bg-orange-600">02</div>
+            <div className="w-32 h-16 rounded-lg bg-orange-600">03</div>
+            <div className="w-32 h-16 rounded-lg bg-orange-600">04</div>
+            {/* Subgrid-1*/}
+            <div className="grid grid-cols-subgrid gap-2 col-span-2 w-auto h-auto space-x-4 rounded-lg justify-center text-center items-center bg-orange-200 mt-8 py-4 px-4 text-sm font-bold text-white transition-colors">
+              <div className=" w-32 h-16 rounded-lg bg-orange-600">05</div>
+              <div className=" w-32 h-16 rounded-lg bg-orange-600">06</div>
+            </div>
+            {/* Subgrid-2*/}
+            <div className="grid grid-cols-subgrid gap-1 col-span-1 w-auto h-auto space-x-4 rounded-lg justify-center text-center items-center bg-orange-200 mt-8 py-4 px-4 text-sm font-bold text-white transition-colors">
+              <div className="w-32 h-16 rounded-lg bg-orange-900"></div>
+            </div>
+            {/* Subgrid-3*/}
+            <div className="grid grid-cols-subgrid gap-2 col-span-2 w-auto h-auto space-x-4 rounded-lg justify-center text-center items-center bg-orange-200 mt-8 py-4 px-4 text-sm font-bold text-white transition-colors">
+              <div className="w-32 h-16 rounded-lg bg-orange-600">07</div>
+              <div className="w-32 h-16 rounded-lg bg-orange-600">08</div>
+            </div>
+          </div>
+
+        </div>
+
+
+        {/* ---------------------------Flex Example-----------------------------------------------*/}
         <div className="relative rounded-xl h-auto pt-4">
         <h2 className={`${lusitana.className} text-2xl mt-4 mb-2 font-bold text-center`}>--- FLEX EXAMPLE ---</h2>
           <div className="flex flex-row space-x-4 h-24 rounded-lg items-center bg-blue-500 px-4 text-sm font-bold text-white transition-colors">
@@ -18,21 +56,20 @@ export default function Page(){
             <div className="flex basis-1/4 h-16 rounded-lg bg-sky-400 justify-center items-center">02</div>
             <div className="flex basis-1/2 h-16 rounded-lg bg-sky-400 justify-center items-center">03</div>
           </div>
-
+          {/* Flex Row Direction*/}
           <div className="flex flex-row hover:flex-row-reverse space-x-4 h-24 rounded-lg items-center bg-blue-500 px-4 mt-4 text-sm font-bold text-white transition-colors">
             <p className='p-4'>Flex Row Direction</p>
             <div className="flex w-16 h-16 rounded-lg bg-sky-400 justify-center items-center">01</div>
             <div className="flex w-16 h-16 rounded-lg bg-sky-400 justify-center items-center">02</div>
             <div className="flex w-16 h-16 rounded-lg bg-sky-400 justify-center items-center">03</div>
           </div>
-
+          {/* Flex Coloumn Direction*/}
           <div className="flex flex-col hover:flex-col-reverse space-y-4 h-auto rounded-lg items-center bg-blue-500 mt-4 pb-4 text-sm font-bold text-white transition-colors">
             <p className='pt-4'>Flex Coloumn Direction</p>
             <div className="flex w-96 h-16 rounded-lg bg-sky-400 justify-center items-center">01</div>
             <div className="flex w-96 h-16 rounded-lg bg-sky-400 justify-center items-center">02</div>
             <div className="flex w-96 h-16 rounded-lg bg-sky-400 justify-center items-center">03</div>
           </div>
-          
           {/* da capire meglio la parte del felx-wrap*/}
           <div className="flex flex-nowrap hover:flex-wrap space-x-24 h-auto rounded-lg items-center bg-blue-500 mt-4 p-4 text-sm font-bold text-white transition-colors">
             <p className='pt-4 pr-4 pl-4'>Flex Wrap Direction</p>
@@ -40,7 +77,6 @@ export default function Page(){
             <div className="flex w-96 h-16 rounded-lg bg-sky-400 justify-center items-center">02</div>
             <div className="flex w-96 h-16 rounded-lg bg-sky-400 justify-center items-center">03</div>
           </div>
-
           {/* mostrare a michele perché non sirtringe il componente*/}
           <div className="relative">
             <div className="mt-4 -mb-3">
@@ -62,27 +98,12 @@ export default function Page(){
               </div>
             </div>
           </div>
-          
           {/* il mouseHover non funziona*/}
           <div className="flex justify-between space-x-4 h-24 rounded-lg items-center bg-blue-500 mt-8 px-4 text-sm font-bold text-white transition-colors">
             <p className='order-first p-4'>Order</p>
             <div className="flex order-last w-16 h-16 rounded-lg bg-sky-400 justify-center items-center">01</div>
             <div className="flex w-16 h-16 rounded-lg bg-sky-400 justify-center items-center">02</div>
             <div className="flex w-16 h-16 rounded-lg bg-sky-400 justify-center items-center">03</div>
-          </div>
-
-        </div>
-        
-        <div className="relative rounded-xl h-auto pt-4"> 
-          <h2 className={`${lusitana.className} text-2xl mt-8 font-bold text-center`}>--- GRID EXAMPLE ---</h2>
-
-          <div className="grid grid-cols-3 gap-3 h-auto space-x-4 rounded-lg items-center bg-orange-400 mt-8 py-4 px-4 text-sm font-bold text-white transition-colors">
-            <p className='order-first w-auto p-4'>Order</p>
-            <div className="w-64 h-16 rounded-lg bg-orange-600 justify-center items-center ">01</div>
-            <div className="w-64 h-16 rounded-lg bg-orange-600 justify-center items-center">02</div>
-            <div className="w-64 h-16 rounded-lg bg-orange-600 justify-center items-center">03</div>
-            <div className="w-64 h-16 rounded-lg bg-orange-600 justify-center items-center">04</div>
-            <div className="w-64 h-16 rounded-lg bg-orange-600 justify-center items-center">05</div>
           </div>
         </div>
       </main>
