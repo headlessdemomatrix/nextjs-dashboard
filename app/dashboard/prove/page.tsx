@@ -9,6 +9,7 @@ export default function Page(){
     return (
       <main>
         <h1 className={`${lusitana.className} text-2xl`}>Test Page</h1>
+        {/* ---------------------------Play with padding/margin-----------------------------------------------*/}
         <div className="relative rounded-xl h-auto pt-4"> 
           <h2 className={`${lusitana.className} text-2xl mt-8 font-bold text-center`}>--- PLAY WITH PADDING / MARGIN ---</h2>
           <div className="flex flex-row h-auto rounded-lg items-center bg-sky-600 mt-4 p-4 text-sm font-bold text-white transition-colors">
@@ -33,7 +34,7 @@ export default function Page(){
               </div>
             </div>
             <div className="flex flex-row justify-center items-center space-x-64 rounded-lg bg-sky-500 w-72 h-72 mr-4 font-mono text-white text-sm font-bold leading-6">
-              <div className="w-48 h-48 self-center rounded-lg bg-sky-400 pl-12">
+              <div className="w-48 h-48 self-center rounded-lg bg-sky-400 pl-12 ho">
                 <div className='pl-16 w-16 h-16 rounded-lg bg-sky-300 m-10'></div>
               </div>
             </div>
